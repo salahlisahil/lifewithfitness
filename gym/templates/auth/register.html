@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- <meta http-equiv="refresh" content="1;URL=index.html" /> -->
+    <title>Login & Signup Form</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="form signup">
+        <header>Signup</header>
+        <form class="formSignUp" action="{% url 'register' %}" method="POST">
+            {% csrf_token %}
+          <input type="text" placeholder="Full name" name="fullname" required />
+          <input type="email" placeholder="Email address" name="email" required />
+          <input type="password" placeholder="Password" name="password" required />
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck" />
+            <label for="signupCheck">I accept all terms & conditions</label>
+          </div>
+          <input class="signUp" type="submit" value="Signup" />
+        </form>
+      </div>
+
+      <div class="form login">
+        <header>Login</header>
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+          <input type="email" placeholder="Email address" name="email" required />
+          <input type="password" placeholder="Password" name="password" required />
+          <a href="#">Forgot password?</a>
+          <input class="logIn" type="submit" value="Login" />
+        </form>
+      </div>
+
+      <script src="{% static 'js/register.js' %}"></script>
+
+        {% if form.errors %}
+             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: "{% for field, errors in form.errors.items %}<strong>{{ field }}:</strong> {{ errors.0 }}<br>{% endfor %}",
+            });
+            </script>
+        {% endif %}
+    </section>
+  </body>
+</html>

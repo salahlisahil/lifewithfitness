@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/firtstimegym.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+            <div class = "navigation-container">
+                <div class = "top-head">
+                    <div class = "web-name">
+                        <h1>GYMNEWS</h1>
+                    </div>
+
+                    <div class = "ham-btn">
+                        <span>
+                            <i class = "fas fa-bars"></i>
+                        </span>
+                    </div>
+
+                    <div class = "times-btn">
+                        <span>
+                            <i class = "fas fa-times"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class = "main-container-left">
+                <h2>Top Stories</h2>
+                <div class = "container-top-left">
+                    <article>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/XIYuxAeKSM0?si=A0CbU3AhooyuE8ag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div>
+                            <h3>Best Used Cars Under $20, 000 for families</h3>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea sint, nisi rem earum fugit? Facere veritatis sapiente eveniet quibusdam.</p>
+
+                            <a href = "#">Read More <span>>></span></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class = "container-bottom-left">
+                    {% for post in hot_posts %}
+                    <article>
+                        <img src="{{ post.image.url }}" alt="">
+                        <div>
+                            <h3>{{ post.title }}</h3>
+                            <p>{{ post.description }}</p>
+
+                            <a href = "#">Read More <span>>></span></a>
+                        </div>
+                    </article>
+                    {% endfor %}
+
+                </div>
+            </section>
+
+            <section class = "main-container-right">
+                <h2>Latest Stories</h2>
+                {% for post in latest_posts %}
+                    <article>
+                        <h4>just in </h4>
+                        <div>
+                            <h2>{{ post.title }}</h2>
+
+                            <p>{{ post.description }}</p>
+
+                            <a href = "#">Read More <span>>></span></a>
+                        </div>
+                        <img src="{{ post.image.url }}" alt="">
+                    </article>
+                {% endfor %}
+            </section>
+        </main>
+
+        <script src="{% static 'js/firstgym.js' %}" async defer></script>
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+
+    </body>
+</html>
