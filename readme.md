@@ -103,7 +103,7 @@ The project got prepared by collaborative actions of [Sahil](https://github.com/
   
   ![GitHub repo size](https://img.shields.io/github/repo-size/salahlisahil/lifewithfitness)
   ![GitHub stars](https://img.shields.io/github/stars/salahlisahil/lifewithfitness?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/salahlisahil/lifewithfitness?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/salahlisahil/lifewithfitness/style=social)
 [![Twitter Follow](https://img.shields.io/twitter/follow/salahlisahil_?style=social)](https://twitter.com/sahil_salahli)
   [![YouTube Video Views](https://img.shields.io/youtube/views/xwXGdpRuSiQ?style=social)](https://youtube.com)
   ![GitHub repo file count (file type)](https://img.shields.io/github/directory-file-count/salahlisahil/lifewithfitness)
