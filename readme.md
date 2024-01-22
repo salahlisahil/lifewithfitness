@@ -62,6 +62,13 @@ python manage.py runserver
 
 * After executing the command above, you can see website on [127.0.0.1:8000](http://127.0.0.1:8000/)
 
+
+⭐ To switch to admin panel:
+
+```bash
+python manage.py createsuperuser
+```
+
 <br>
 
 ### ☑ Technologies used
