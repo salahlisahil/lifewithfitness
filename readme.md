@@ -6,7 +6,7 @@
 
 <br>
 
-  <a href=""><strong> 📺 Live </strong></a> 
+  <a href="https://ayseuluxan.github.io/lifewithfitness/"><strong> 📺 Live </strong></a> 
 
 </div>
 
